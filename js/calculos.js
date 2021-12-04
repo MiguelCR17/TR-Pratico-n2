@@ -18,5 +18,5 @@ function calcbinario () {
         num = parseInt(num / 2);
         binary =  (num % 2) + (binary);
     }
-    document.getElementById("binario").innerHTML = "Resultado: " + binary;
+    document.getElementById("binarioP").innerHTML = "Resultado: " + binary;
 }
