@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Convertor de bases</title>
+        <!-- Bootstrap Icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+        <!-- SimpleLightbox plugin CSS-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="#page-top">Conversão de bases</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto my-2 my-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="#decimal">Decimal</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#binario">Binário</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#octal">Octal</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#hexa">Hexadecimal</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container px-4 px-lg-5 h-100">
+                <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
+                    <div class="col-lg-8 align-self-end">
+                        <h1 class="text-white font-weight-bold">O que é conversão de bases</h1>
+                        <hr class="divider" />
+                    </div>
+                    <div class="col-lg-8 align-self-baseline">
+                        <p class="text-white-75">Conversão de base numérica é a passagem da representação de um número de uma base numérica para outra, alterando a simbologia para se adequar à nova base. A base que normalmente usamos é a decimal ou base dez, pois contém dez algarismos.</p>
+                        <a class="btn btn-primary btn-xl" href="#decimal">Começar a converter</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Decimal-->
+        <section class="page-section bg-primary" id="decimal">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="text-white mt-0">Decimal</h2>
+                        <hr class="divider divider-light" />
+                        <p class="text-white-75 mb-5">Digite o número que pertente converter para decimal no retangulo abaixo e de seguida clique em "Calcular!".</p>
+                        <!--Radio-->
+                        <form class="text-white-75 ">
+                            <label for="binario">
+                            <input type="radio" id="binario" name="base" value="Binario">Binário
+                            </label>
+                            <label for="octal">
+                            <input type="radio" id="octal" name="base" value="Octal">Octal
+                            </label>
+                            <label for="hexa">
+                            <input type="radio" id="hexa" name="base" value="Hexadecimal">Hexadecimal
+                            </label>
+                        </form>
+                        <br/>
+                        <input type="text" id="leitord" placeholder="Digite o numero" aria-label="default input example"/>
+                        <br/>
+                        <input type="button" onclick="calcdecimal();" class="bt" value="Calcular!"/>
+                        <p class="text-white-75 mb-5" id="decimalR"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+         <!-- Binario-->
+         <section class="page-section" id="binario">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="mt-0">Binário</h2>
+                        <hr class="divider"/>
+                        <p class="text-muted mb-5">Digite o número que pertente converter para decimal no retangulo abaixo e de seguida clique em "Calcular!".</p>
+                        <input type="number" id="leitorb" placeholder="Digite o numero" aria-label="default input example"/>
+                        <br/>
+                        <input type="button" onclick="calcbinario();" class="bto" value="Calcular!"/>
+                        <p id="binarioR" class="text-muted mb-5"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Octal-->
+        <section class="page-section bg-primary" id="octal">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="text-white mt-0">Octal</h2>
+                        <hr class="divider divider-light" />
+                        <p class="text-white-75 mb-5">Digite o número que pertente converter para decimal no retangulo abaixo e de seguida clique em "Calcular!".</p>
+                        <input type="number" id="leitoro" placeholder="Digite o numero" aria-label="default input example"/>
+                        <br/>
+                        <input type="button" onclick="calcoctal();" class="bt" value="Calcular!"/>
+                        <p id="octalR" class="text-white-75 mb-5"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Binario-->
+        <section class="page-section" id="hexa">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="mt-0">Hexadecimal</h2>
+                        <hr class="divider"/>
+                        <p class="text-muted mb-5">Digite o número que pertente converter para decimal no retangulo abaixo e de seguida clique em "Calcular!".</p>
+                        <input type="number" id="leitorh" placeholder="Digite o numero" aria-label="default input example"/>
+                        <br/>
+                        <input type="button" onclick="calchexa();" class="bto" value="Calcular!"/>
+                        <p id="hexaR" class="text-muted mb-5"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="bg-light py-5">
+            <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Trabalho realizado por: Miguel Ribeiro, Cláudio Sousa, Jorge Brito</div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- SimpleLightbox plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        <!--JS para os calculos-->
+        <script src="js/calculos.js"></script>
+    </body>
+</html>
