@@ -61,6 +61,7 @@
                         <input type="number" id="leitord" placeholder="Digite o numero" aria-label="default input example"/>
                         <br/>
                         <input type="button" onclick="calcdecimal();" class="bt" value="Calcular!"/>
+                        <p class="text-white-75 mb-5" id="decimalR"></p>
                         <p id="decimal"></p>
                     </div>
                 </div>
@@ -77,6 +78,7 @@
                         <input type="number" id="leitorb" placeholder="Digite o numero" aria-label="default input example"/>
                         <br/>
                         <input type="button" onclick="calcbinario();" class="bto" value="Calcular!"/>
+                        <p id="binarioR" class="text-muted mb-5"></p>
                         <p id="binarioP"></p>
                     </div>
                 </div>
@@ -90,9 +92,10 @@
                         <h2 class="text-white mt-0">Octal</h2>
                         <hr class="divider divider-light" />
                         <p class="text-white-75 mb-5">Digite o número que pertente converter para decimal no retangulo abaixo e de seguida clique em "Calcular!".</p>
-                        <input type="number" placeholder="Digite o numero" aria-label="default input example"/>
+                        <input type="number" id="leitoro" placeholder="Digite o numero" aria-label="default input example"/>
                         <br/>
-                        <input type="button" class="bt" value="Calcular!"/>
+                        <input type="button" onclick="calcoctal();" class="bt" value="Calcular!"/>
+                        <p id="octalR" class="text-white-75 mb-5"></p>
                     </div>
                 </div>
             </div>
@@ -105,9 +108,10 @@
                         <h2 class="mt-0">Hexadecimal</h2>
                         <hr class="divider"/>
                         <p class="text-muted mb-5">Digite o número que pertente converter para decimal no retangulo abaixo e de seguida clique em "Calcular!".</p>
-                        <input type="number" placeholder="Digite o numero" aria-label="default input example"/>
+                        <input type="number" id="leitorh" placeholder="Digite o numero" aria-label="default input example"/>
                         <br/>
-                        <input type="button" class="bto" value="Calcular!"/>
+                        <input type="button" onclick="calchexa();" class="bto" value="Calcular!"/>
+                        <p id="hexaR" class="text-muted mb-5"></p>
                     </div>
                 </div>
             </div>
@@ -194,5 +198,7 @@
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        <!--JS para os calculos-->
+        <script src="js/calculos.js"></script>
     </body>
 </html>
