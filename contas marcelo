@@ -1,0 +1,12 @@
+function res() {
+
+    if (document.getElementbyId ('selectid').value=="binário") {
+        this.value = this.value.toString(2);
+    }
+    else if  (document.getElementbyId ('selectid').value=="octal") {
+        this.value = this.value.toString(8);
+    }
+    else if  (document.getElementbyId ('selectid').value=="hexadecimal") {
+        this.value = this.value.toString(16);
+    }
+}
